@@ -1,4 +1,7 @@
 <h1><%= @job.title %></h1>
 <p><%= @job.description %></p>
+<p>Tags: 
+  <%= @job.tags.map{ |t| t.title }.join(', ') %>
+</p>
 <h5><%= link_to "Edit Posting", edit_job_path(@job) %></h5>
 <h5><%= link_to "Delete Posting", @job, method: :delete %></h5>

@@ -14,10 +14,14 @@ class JobsController < ApplicationController
   
   def edit
     @job = Job.find(params[:id])
+	#@tags = @job.tags.map(&:name).join(" ")
   end
   
   def update
     @job = Job.find(params[:id])
+	
+	#tags = job_params.delete('tags')
+	
 	@job.update_attributes(job_params)
     redirect_to jobs_path
   end

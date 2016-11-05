@@ -12,6 +12,14 @@
 	<%= f.text_area :required_skills, size: '60x6' %>
   </div>
   <div>
+    <p>Tags:
+	  <%= @job.tags.map{ |t| t.title }.join(', ') %>
+	</p>
+	
+	<p>Add Tags:
+	</p>
+  </div>
+  <div>
     <%= f.submit %>
   </div>
 <% end %>
