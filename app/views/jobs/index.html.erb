@@ -1,1 +1,5 @@
 <h1>RailsBridgeCorp Open Jobs</h1>
+
+<% @jobs.each do |job| %>
+  <h3><%= link_to job.title, job %></h3>
+<% end %>
